@@ -121,7 +121,7 @@ if (arrowGroup.isTouching(blueB)) {
 //Use função destroyEach() para destruir arrowGroup.
 //Aumente a pontuação em 1.
 if (arrowGroup.isTouching(pinkB)) {
-  xxxxB.destroyEach();
+  pinkB.destroyEach();
   arrowGroup.destroyEach();
   score=score+3;
 }
