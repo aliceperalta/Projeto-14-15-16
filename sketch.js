@@ -38,11 +38,11 @@ function setup() {
    score = 0  
   redB= new Group();
   //Crie um grupo para greenBalloon (balão verde)
-  xxxxxB = new Group();
+  greenB = new Group();
  //Crie um grupo para blueBalloon (balão azul)
-  xxxxB = new Group();
+  blueB = new Group();
  //Crie um grupo para pinkBalloon (balão rosa)
-  xxxxB = new Group();
+  pinkB = new Group();
   
   arrowGroup= new Group();
  
@@ -96,7 +96,7 @@ function draw() {
  
   if (gameState === END) {
   bow.destroy();
-  scene.velocityX = 0;
+  scene.velocityX =+3;
 }
 
 if (arrowGroup.isTouching(greenB)) {
@@ -110,20 +110,20 @@ if (arrowGroup.isTouching(greenB)) {
 //Use função destroyEach() para destruir o grupo blueBalloon (balão azul)
 //Use função destroyEach() para destruir arrowGroup.
 //Aumente a pontuação em 2.
-if (arrowGroup.isTouching(xxxxB)) {
-  xxxxB.destroyEach();
+if (arrowGroup.isTouching(blueB)) {
+  blueB.destroyEach();
   arrowGroup.destroyEach();
-  score=score+00;
+  score=score+3;
 }
 
 //Crie a função isTouching()
 //Use função destroyEach() para destruir o grupo pinkBalloon (balão rosa)
 //Use função destroyEach() para destruir arrowGroup.
 //Aumente a pontuação em 1.
-if (arrowGroup.isTouching(xxxxB)) {
+if (arrowGroup.isTouching(pinkB)) {
   xxxxB.destroyEach();
   arrowGroup.destroyEach();
-  score=score+00;
+  score=score+3;
 }
  }
   
